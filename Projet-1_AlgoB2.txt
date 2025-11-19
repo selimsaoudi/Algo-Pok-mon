@@ -1,0 +1,56 @@
+Objectif : Créer un jeu Pokémon en Python CLI
+
+Fonctionnalités attendues :
+    Au démarrage, le joueur va choisir un Pokémon parmi 10 disponibles
+    Chaque Pokémon est défini par un nom, un nombre maximum et actuel de points de vie, et une puissance d'attaque
+    Il vous faudra définir une liste manuelle de 10 Pokémons, avec nom, PV, et attaque. Vous pouvez inventer vos propres Pokémon.
+    L'adversaire prends un autre Pokémon aléatoire parmi les 9 disponibles
+    Le combat démarre. Chaque dresseur joue à tour de rôle, le joueur commence
+    A chaque tour, le joueur peut effectuer UNE des actions suivante, AU CHOIX :
+        • Attaquer (Enlever des PV - Points de vie - au Pokémon adverse)
+        • Potion (Regagner 20 PV - Sans que les PV actuels ne soient supérieurs au PV maximum)
+        • Passer son tour
+    Une fois que le joueur a terminé, l'adversaire va également effectuer UNE de ces actions, mais au hasard
+    Le jeu continue ainsi, jusqu'a ce qu'un des dresseur ait perdu (Voir plus bas)
+    Les entrées utilisateur doit être sécurisé, rentrer une lettre à la place d'un nombre ne doit pas faire planter le programme
+
+Après chaque tour d'un dresseur, vous devez afficher les informations suivantes dans le terminal :
+    • Nom du Pokémon du joueur, et ses PV actuels / PV total
+    • Si c'est au tour du joueur, afficher un menu lui présentant ses choix (Attaquer, potion, ...)
+    • Nom du Pokémon de l'adversaire, et ses PV actuels / PV total
+    • Si c'est au tour de l'adversaire, il faut indiquer ce qu'il fait (Attaquer, ...)
+Enfin, après chaque attaque, il faut vérifier si le Pokémon attaqué a encore des PV. Si ce n'est pas le cas, il est considéré vaincu, et le combat s'arrête.
+Un menu proposera alors de recommencer une partie, soit de terminer le programme.
+
+Après avoir terminé le développement du jeu, 2 bonus supplémentaires peuvent être ajoutés. Ils sont indépendant, et peuvent être developpés dans l'ordre de votre choix :
+    • Bonus 1 :
+        Créer une équipe Pokémon. Le joueur et l'adversaire doivent choisir 3 Pokémons, (Toujours au choix pour le joueur, toujours au hasard pour l'adversaire) et combattre avec
+        À chaque tour, le joueur doit avoir la possibilité de changer son Pokémon pour un autre de l'équipe, au choix
+        Si un Pokémon est KO, le dresseur doit le remplacer par un autre Pokémon encore valide de son équipe.
+        Si les 3 mêmes Pokémon d'un dresseur sont KO, le dresseur perd le duel.
+        Lors de l'utilisation d'une potion, il faudra demander/prendre au hasard le Pokémon qui doit recevoir la potion
+    • Bonus 2 :
+        Ajouter un système de types de Pokémon. Chaque Pokémon aura un type prédéfini parmis Plante, Eau, Feu.
+        En fonction de son type, un Pokémon pourra doubler ses dégats, ou les diviser par deux.
+        Par exemple, si un Pokémon Feu attaque un Pokémon Eau, les dégats sont divisés par deux. Si un Pokémon Eau attaque un Pokémon Feu, les dégats sont doublés.
+        Le type du Pokémon doit être marqué à coté de son nom à chaque tour
+
+Enfin, quelques règles supplémentaires :
+    • Quel que soit votre rendu, le programme doit pouvoir être lancé directement, sans modification du code source
+    • L'usage de la POO est obligatoire, ainsi que de ses bonnes pratiques. (Notamment l'encapsulation) Vous aurez donc à minimum une classe Pokémon
+    • Aucune librairie externe n'est autorisée, seules les modules internes peuvent être utilisés (Interne => Installés par défaut avec Python, comme rand, ...)
+
+Barème :
+    Base du projet / 10
+        • Choix du Pokémon du joueur et de l'adversaire / 1
+        • Système de tour par tour / 1
+        • Le Pokémon du joueur peut attaquer / 2
+        • Le Pokémon du joueur peut boire une potion / 1
+        • Le Pokémon du joueur peut passer son tour / 1
+        • Le Pokémon adverse joue au hasard / 2
+        • Fin du combat quand un Pokémon est KO et recommencer une partie / 1
+        • Code clair, lisible et compréhensible / 1
+    Bonus / 5
+        • Équipe Pokémon / 3
+        • Types Pokémon / 2
+    Présentation / 5
